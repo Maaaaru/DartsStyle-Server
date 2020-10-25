@@ -23,6 +23,9 @@ services:
     image: postgres:latest
     ports: 
       - "8080:8080"
+    environment:
+      POSTGRES_HOST_AUTH_METHOD: trust
+      POSTGRES_DB: db
     volumes: 
       - /var/lib/postgresql/data
     networks: 
